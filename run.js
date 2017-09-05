@@ -1,0 +1,10 @@
+const expected = "abc\r\ndef\r\nghi"
+const actual   = process.env.TEST_ENV_VAR.replace(/\\r/g, '\r').replace(/\\n/g, '\n')
+console.log("-----")
+console.log("expected")
+console.dir(expected)
+console.log("actual")
+console.dir(actual)
+console.log("-----")
+if(expected !== actual)
+  process.exit(1)
