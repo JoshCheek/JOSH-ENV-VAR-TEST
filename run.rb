@@ -1,3 +1,7 @@
-value = ENV['TEST_ENV_VAR']
-p value
-exit value == "abc\r\ndef"
+expected = "abc\r\ndef"
+actual   = ENV['TEST_ENV_VAR']
+puts "-----"
+p expected
+p actual
+puts "-----"
+exit expected == actual
